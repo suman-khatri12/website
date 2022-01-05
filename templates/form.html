@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <title>E-Tax</title>
+  </head>
+
+
+   <header>
+     <nav id="header-nav" class="navbar navbar-default">
+       <div class="container">
+         <div class="navbar-header">
+             <a href="/" id="logo">E-TAX</a>
+
+
+     <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+   </button>
+   </div>
+   </div>
+
+     </nav>
+    </header>
+    <body>
+<div  id="main-content" class="container">
+    <div class="container">
+      <div class="text-block1">
+          <form class="row g-3" method="post" action="/form/{{ user.id }}">
+
+              <div class="col-md-12">
+                <label >Bike only</label>
+              </div>
+
+            <div class="col-md-12">
+                <br>
+                <label>Province 3</label>
+              </div>
+              <br>
+            <div class="col-md-4">
+                <br>
+                <label for="num"> Vechicle Number</label>
+                <input type="text"  class="form-control" id="num" name = 'v_no'required>
+              </div>
+
+            <div class="col-md-4">
+                <br>
+                <label for="comp"> Company</label>
+                <input type="text"  class="form-control" id="comp" name = 'company'required>
+              </div>
+              <div class="col-md-4">
+                  <br>
+                <label for="bike">CC</label>
+                  <input type="tel" name = 'cc' id = 'bike' class="form-control" required>
+              </div>
+              <div class="col-md-12">
+                  <br>
+                <label  for="inputCity" class="form-label">Zone</label>
+                <input type="text" placeholder="Type Your Zone" class="form-control" id="zone" name="zone">
+              </div>
+              <div class="col-md-12">
+                  <br>
+                <button type="submit" class="btn btn-primary">Pay</button>
+              </div>
+            </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>

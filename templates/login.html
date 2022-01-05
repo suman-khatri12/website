@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <title>E-Tax</title>
+  </head>
+
+
+   <header>
+     <nav id="header-nav" class="navbar navbar-default">
+       <div class="container">
+         <div class="navbar-header">
+             <a href="/" id="logo">E-TAX</a>
+
+
+     <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+   </button>
+   </div>
+   </div>
+
+     </nav>
+    </header>
+    <body>
+<div  id="main-content" class="container">
+  <div class="container">
+      <H2>Login Form</H2>
+    <div class="text-block5">
+        <div class="login">
+            <form id="login" method="post" action="/login">
+                <label for="pnum"><b>Phone Number </b> </label>  <br>
+                <input type="tel" name="pnum" id="pnum" placeholder="Phone Number" required>
+                <br><br>
+                <label for="password"><b>Password </b> </label> <br>
+                <input type="Password" name="password" id="Password" placeholder="Password" required>
+                <br>
+                {% with message = get_flashed_messages() %}
+                {% if message %}
+                    <p style="color: red">
+                        {{ message[0] }}
+                    </p>
+                    {% endif %}
+                {%endwith  %}
+            <br>
+                <button type="submit" class="btn btn-primary">log in</button>
+             <p> Don't have account? <a href="/register">Signup here</a></p>
+            </form>
+        </div>
+
+    </div>
+  </div>
+</div>
+    </body>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script>
+       login = {
+           init: function (){
+               console.log("This is  a login page")
+           }
+       }
+       login.init();
+  </script>
+</html>

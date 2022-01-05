@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rye">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css' ) }}">
+
+
+   <header>
+     <nav id="header-nav" class="navbar navbar-default">
+       <div class="container">
+         <div class="navbar-header">
+             <a href="/" id="logo">E-TAX</a>
+
+
+     <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+   </button>
+   </div>
+
+    <span class="navbar-right">
+        {% if user.is_authenticated %}
+            Hi {{ user.firstname }}
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login"> Login </a>
+        {% endif %}
+      </span>
+
+   </div>
+
+     </nav>
+    </header>
+  </head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="alert alert-danger" role="alert">
+                <h4>Bike tax payment</h4>
+                <h4>Form no {{ bill_detail.form_id }}</h4>
+                <h3> payment date {{ bill_detail.date_created }}</h3>
+            <H1>Username = {{ user.firstname }}</H1>
+            <h2> Pyament  for {{bill_detail.company }} company <br>
+                Bike no: {{bill_detail.vehicle_no}} which is of {{ bill_detail.vehiclecc }}CC</h2>
+                <h3 style="color: red">Total Tax Cost = Rs{{ total }}</h3>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

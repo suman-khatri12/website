@@ -1,0 +1,226 @@
+body,
+html {
+  height: 100%;
+}
+@media (min-width: 720px) {
+  .jumbotron {
+    font-size: 30px;
+    color: rgb(250, 188, 146);
+    font-family: Rye;
+    font-weight: bolder;
+    background-image: url("/static/img/tax.jpg");
+    background-size: cover;
+    height: 675px;
+    border: 2px solid #ddbae8;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 50px #ce2f2f;
+    text-shadow: 0 0 50px #6e0606;
+  }
+}
+#header-nav {
+  background-image: url("/static/img/t.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#collapsable-nav {
+  align-items: baseline;
+  padding: 10px;
+}
+.navbar-brand {
+  padding-top: 25px;
+}
+#logo {
+  font-size: 50px;
+  font-family: Rye;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  color: #9e5e2a;
+  padding: 10px;
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  #logo {
+    font-size: 50px;
+    font-family: Rye;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    color: #857182;
+    padding: 10px;
+  }
+}
+
+.fab {
+  font-size: 20px;
+  padding: 10px;
+  color: black;
+}
+
+/*Home Page*/
+#menu-tiles,
+#specials-tiles,
+#offers-tiles {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 2px solid #583d61;
+  overflow: hidden;
+}
+#menu-tiles:hover,
+#specials-tiles:hover,
+#offers-tiles:hover {
+  box-shadow: 0 1px 10px #f3652d;
+}
+#menu-tiles {
+  background-image: url("/static/img/ru.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#specials-tiles {
+  background: url("/static/img/ra.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#offers-tiles {
+  background: url("/static/img/re.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#menu-tiles span,
+#specials-tiles span,
+#offers-tiles span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #f06832;
+  color: black;
+  opacity: 0.8;
+}
+.panel-footer {
+  background-image: url("/static/img/ta.jpg");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-top: 0px;
+  background-position: center;
+
+  background-size: cover;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+span {
+  font-size: 2em;
+}
+p.textmilaying {
+  border: 1px;
+  padding: 1px;
+  font-size: 10px;
+}
+.text-right {
+  padding: 10px;
+}
+/*Menu categories*/
+.category-tile {
+  position: relative;
+  border: 2px solid #dd71f0;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.category-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  background-color: #926dc9;
+  color: #372845;
+  opacity: 0.8;
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px #a6516c;
+}
+
+/*About us */
+h4 {
+  font-size: 40px;
+  text-align: center;
+  font-family: cursive;
+}
+h4 a {
+  font-size: 40px;
+  text-align: center;
+  font-family: cursive;
+}
+.text-block1 {
+  margin: 30px;
+  font-size: 20px;
+  font-family: cursive;
+  border-radius: 10px;
+  background-color: #e0a176;
+  color: #0f0103;
+  padding: 40px;
+  box-shadow: 1px 1px 50px #f87a47;
+  height: 500px;
+}
+.text-block3 {
+  margin: 30px;
+  font-size: 20px;
+  font-family: cursive;
+  border-radius: 10px;
+  background-color: #e0a176;
+  color: #0f0103;
+  padding: 40px;
+  box-shadow: 1px 1px 50px #f87a47;
+  height: 200px;
+}
+.text-block2 {
+  margin: 30px;
+  font-size: 20px;
+  font-family: cursive;
+  border-radius: 10px;
+  background-color: #e0a176;
+  color: #0f0103;
+  background-image: url("/static/img/rate.PNG");
+  padding: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 50px #f87a47;
+  height: 500px;
+}
+.text-block5 {
+  margin: 30px;
+  font-size: 20px;
+  font-family: cursive;
+  border-radius: 10px;
+  background-color: #e0a176;
+  color: #0f0103;
+  padding: 40px;
+  box-shadow: 1px 1px 50px #f87a47;
+  height: 350px;
+  width: 400px;
+}
+/*gallery*/
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  box-shadow: 1px 1px 10px #f28aef;
+}
+
+/* Clear floats after image containers */
+.row1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
